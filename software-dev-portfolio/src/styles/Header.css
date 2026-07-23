@@ -1,0 +1,20 @@
+﻿.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aqua;
+    align-items: center;
+}
+
+.header-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}

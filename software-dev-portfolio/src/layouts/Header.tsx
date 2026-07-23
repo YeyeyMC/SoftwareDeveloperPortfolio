@@ -1,10 +1,14 @@
 ﻿import React from 'react';
+import '../styles/Header.css';
 
 const Header = () => {
     return (
-        <header>
+        <header className={"header-container"}>
+            <div>
+                <h1>Yeison Munoz</h1>
+            </div>
             <nav>
-                <ul>
+                <ul className={"header-nav-container"}>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Education</a></li>
                     <li><a href="#">Experience</a></li>
@@ -16,3 +20,5 @@ const Header = () => {
         </header>
     )
 }
+
+export default Header;
