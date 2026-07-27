@@ -4,3 +4,9 @@
     justify-content: space-between;
     min-height: 100dvh;
 }
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}

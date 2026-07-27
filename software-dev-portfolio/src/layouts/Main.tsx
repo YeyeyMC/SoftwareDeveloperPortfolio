@@ -6,8 +6,8 @@ import Projects from "../components/Projects.tsx";
 const Main = () => {
     return (
         <div className="main-container">
-            <Description></Description>
-            <Projects></Projects>
+            <Description/>
+            <Projects/>
         </div>
     )
 }

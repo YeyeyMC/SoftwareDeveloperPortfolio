@@ -3,15 +3,48 @@ import Project from "./Project.tsx";
 import '../styles/Projects.css';
 import monsterRouteImg from '../assets/monsterroute.png'
 import rekindledImg from '../assets/rekindled.jpg'
+import type {Link, ProjectData, Tag, CaseStudyData} from "../types/Types.ts";
 
 const Projects = () => {
     const [filter, setFilter] = useState('all');
     
-    const projectsArray = [
-        {id: 1, title: "Rekindled", image: rekindledImg, description: "Rekindled is a 3D Third Person game", category: "games"},
-        {id: 2, title: "Monster Route", image: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "games"},
-        {id: 3, title: "Telemetry System", image: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "web"},
-        {id: 4, title: "PokeWalk", image: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "mobile"},
+    const projectsArray: ProjectData[] = [
+        {id: 1, title: "Rekindled", img: rekindledImg, description: "Rekindled is a 3D Third Person game", category: "games", year: "2026",
+            caseStudy: {id: 1, title: "Rekindled", description: "Case study for Rekindled", img: rekindledImg, year: "2026", video: "https://www.youtube.com/watch?v=he_dPEEWeLY"},
+            links: [
+                {id: 1, name: "Steam Page", url: "https://store.steampowered.com/app/4926530/Rekindled/"}, 
+                {id: 2, name: "Trailer", url: "https://www.youtube.com/watch?v=he_dPEEWeLY"}],
+            tags: [
+                {id: 1, name: "Unity"},
+                {id: 2, name: "C#"}]
+        },
+        {id: 2, title: "Monster Route", img: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "games", year: "2026",
+            caseStudy: {id: 1, title: "Rekindled", description: "Case study for Rekindled", img: rekindledImg, year: "2026", video: "#"},
+            links: [
+                {id: 1, name: "Steam Page", url: "https://store.steampowered.com/app/4926530/Rekindled/"},
+                {id: 2, name: "Trailer", url: "https://www.youtube.com/"}],
+            tags: [
+                {id: 1, name: "Unity"},
+                {id: 2, name: "C#"}]
+        },
+        {id: 3, title: "Telemetry System", img: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "web", year: "2026",
+            caseStudy: {id: 1, title: "Rekindled", description: "Case study for Rekindled", img: rekindledImg, year: "2026", video: "#"},
+            links: [
+                {id: 1, name: "Steam Page", url: "https://store.steampowered.com/app/4926530/Rekindled/"},
+                {id: 2, name: "Trailer", url: "https://www.youtube.com/"}],
+            tags: [
+                {id: 1, name: "Unity"},
+                {id: 2, name: "C#"}]
+        },
+        {id: 4, title: "PokeWalk", img: monsterRouteImg, description: "Monster Route is a 2D First person game", category: "mobile", year: "2026",
+            caseStudy: {id: 1, title: "Rekindled", description: "Case study for Rekindled", img: rekindledImg, year: "2026", video: "#"},
+            links: [
+                {id: 1, name: "Steam Page", url: "https://store.steampowered.com/app/4926530/Rekindled/"},
+                {id: 2, name: "Trailer", url: "https://www.youtube.com/"}],
+            tags: [
+                {id: 1, name: "Unity"},
+                {id: 2, name: "C#"}]
+        }, 
     ]
     
     const filteredProjects = filter === "all" ? projectsArray : 
@@ -28,12 +61,7 @@ const Projects = () => {
             </div>
             <div className="project-components-container">
                 {filteredProjects.map(project => (
-                    <Project 
-                        key = {project.id}
-                        title={project.title}
-                        description={project.description}
-                        image={project.image}
-                    />
+                    <Project key={project.id} project={project}/>
                 ))}
             </div>
         </div>
