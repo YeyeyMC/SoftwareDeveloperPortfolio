@@ -14,11 +14,13 @@ const CaseStudy = ({caseStudy, onClose} : CaseStudyProps) => {
                 <div className="case-study-image">
                     <img alt="Case Study Photo" src={caseStudy.img}></img>
                 </div>
-                <p>{caseStudy.description}</p>
-                <p>{caseStudy.description}</p>
-                <p>{caseStudy.description}</p>
-                <p>{caseStudy.description}</p>
-                <p>{caseStudy.description}</p>
+                {caseStudy.descriptions?.map((description) => (
+                    <div className="case-study-description-container">
+                        <p>{description.title}</p>
+                        <p>{description.description}</p>
+                        <p>{description.decisions}</p>
+                    </div>
+                ))}
                 <div className="case-study-youtube-container">
                     <YoutubePlayer src={caseStudy.video} controls={true} width="100%" height="100%"/>
                 </div>

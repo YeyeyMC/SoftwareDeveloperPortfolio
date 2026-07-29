@@ -62,3 +62,7 @@
     width: 100%;
     aspect-ratio: 16/9;
 }
+
+.case-study-description-container {
+    white-space: pre-line;
+}

@@ -1,12 +1,13 @@
 ﻿.description-container {
     display: flex;
     flex-direction: row;
-    background-color: beige;
-    padding: 20px;
+    background-color: bisque;
+    padding: 1rem 2rem 1rem 2rem;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2rem;
 }
 
 .description-text-container {
@@ -16,9 +17,9 @@
     justify-content: flex-start;
     height: auto;
     width: auto;
-    max-width: 450px;
-    /*position: absolute;*/
+    max-width: 35rem;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .description-photo-container {
@@ -44,4 +45,14 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     gap: 5px;
+}
+
+.description-contact-section {
+    display: flex;
+    background-color: aliceblue;
+    padding: 30px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    max-width: 35rem;
 }

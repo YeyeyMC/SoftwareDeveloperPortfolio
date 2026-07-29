@@ -1,6 +1,10 @@
 import react from 'react'
 import '../styles/Description.css'
 import profilePhoto from "../assets/profilephoto.jpeg"
+import { SiGmail } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaItchIo } from "react-icons/fa";
 
 const Description = () => {
     return (
@@ -23,6 +27,21 @@ const Description = () => {
             <div className="description-photo-container">
                 <img src={profilePhoto} alt="ProfilePhoto"></img>
             </div>
+            <aside className="description-contact-section">
+                <h3>Contact / Info</h3>
+                <a href="mailto:munozceronyeisonandres@gmail.com">
+                    <SiGmail size={30}/>
+                </a>
+                <a href="https://www.linkedin.com/in/yeisonamunoz/">
+                    <FaLinkedin size={30}/>
+                </a>
+                <a href="https://github.com/YeyeyMC">
+                    <FaGithub size={30}/>
+                </a>
+                <a href="https://yeison-munoz.itch.io/">
+                    <FaItchIo size={30}/>
+                </a>
+            </aside>
         </div>
     )
 }

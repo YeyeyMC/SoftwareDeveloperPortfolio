@@ -1,0 +1,24 @@
+﻿.educations-container {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.educations-section-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: crimson;
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    gap: 1rem;
+    margin: 0 2rem 2rem 2rem;
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
