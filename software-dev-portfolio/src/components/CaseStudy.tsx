@@ -15,7 +15,7 @@ const CaseStudy = ({caseStudy, onClose} : CaseStudyProps) => {
                     <img alt="Case Study Photo" src={caseStudy.img}></img>
                 </div>
                 {caseStudy.descriptions?.map((description) => (
-                    <div className="case-study-description-container">
+                    <div className="case-study-description-container" key={description.id}>
                         <p>{description.title}</p>
                         <p>{description.description}</p>
                         <p>{description.decisions}</p>
